@@ -1,0 +1,628 @@
+/* setup */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    text-rendering: optimizeLegibility;
+}
+/* ------------------------- */
+/* sử dụng nhiều */
+h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00833b;
+    font-size: 150%;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.btn{
+    text-decoration: none;
+    color: white;
+    background-color: #f58831;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 0 5px;
+    width: 120px;
+    display: inline-block;
+    text-align: center;
+    transition: all .3s;
+}
+.btn:hover,
+.btn:active
+{
+    background-color: #00833b;
+    color: white;
+}
+.row{
+    margin:0 auto;
+}
+section{
+    padding: 50px;
+}
+.fa-2x{
+    color: #ec7a1c;
+}
+.fa-2x:hover{
+    color: #00833b;
+}
+a{
+    text-decoration: none;
+    color: #00833b;
+}
+a:hover,
+.navbar-toggler:hover{
+    color: #ec7a1c;
+}
+.product-name{
+    margin-top: 10px;
+}
+.product-name,
+.product-price{
+    text-align: center;
+}
+.mua{
+    position: relative;
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    margin: 70px auto;
+}
+.mua a{
+    position: absolute;
+}
+.btn-all{
+    margin: 30px auto
+}
+.img-fluid:hover{
+    transform:scale(1.1) ;
+    transition: all .5s;
+}
+h4{
+    text-align: center;
+}
+.line{
+    height: 3px;
+    background-image:url("./image/line.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 20px;
+}
+.fa{
+    margin-right: 5px;
+}
+textarea{
+    height: 100px !important;
+}
+select{
+    margin-bottom: 5px;
+}
+/* -------------------- */
+/* header */
+.toggle{
+    color: #ec7a1c;
+    display: none;
+    background-color: #00833b;
+    height: 60px;
+    line-height: 60px;
+    padding: 5px;
+    cursor: pointer;
+}
+.toggle i:hover{
+    color: #ec7a1c;
+}
+.toggle .fa{
+    float: right;
+    color: white;
+    margin: 10px auto;
+}
+
+.top-bar{
+    font-size: 14px;
+    background-color: #00833b;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+}
+.top-bar ul li,
+#contact ul li,
+.toggle ul li{
+    float: right;
+    display: inline;
+    margin-left: 30px;
+}
+.top-bar ul li{
+    list-style: none;
+}
+.top-bar a{
+    color: white;
+}
+.middle-header img{
+    width: 150px;
+    margin: 10px auto;
+}
+.input-group{
+    width: 100%;
+    margin: 20px auto;
+}
+.input-group button{
+    width: 70px;
+    height: 40px;
+}
+.input-group input{
+    border-radius: 20px;
+    height: 40px;
+}
+#contact ul li{
+    padding: 0px 5px;
+}
+#contact ol{
+    padding-left: 20px;
+}
+#contact img{
+    width: 30px;
+    float: left;
+}
+#cart-num{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #f58831;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    font-style: normal;
+}
+
+.btn-outline-success{
+    padding: 5px 5px;
+}
+/* section */
+.about-picture{
+    position: relative;
+    margin: 0 auto;
+}
+.picture-title{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-65%,-50%);
+    opacity: 0;
+    transition: all .5s;
+    font-size: 20px;
+}
+.about-picture img{
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    border: 4px solid #ec7a1c;
+    box-shadow: 0px 5px 15px 5px #ec7a1c;
+    transition: all .5s;
+    
+}
+.about-picture:hover .picture-title:hover,
+.about-picture:active .picture-title:active{
+    opacity: 1;
+}
+.about-picture:hover img{
+    filter: brightness(45%) blur(2px);
+}
+
+/* ---------------------------- */
+/* footer */
+footer{
+    border-top:3px;
+    padding: 20px;
+}
+footer ul li{
+    list-style: none;
+}
+footer ul li a{
+    color: black;
+}
+.logo-footer{
+    transform: translate(50%,0%);
+}
+
+.text-footer{
+    text-align: center;
+    background-color: blanchedalmond;
+    height: 60px;
+    line-height: 60px;
+}
+#backtop{
+    width: 50px;
+    height: 50px;
+    background: #ec7a1c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    cursor: pointer;
+}
+.pay-method{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pay-method img{
+    float: left;
+    width: 150px;
+    padding: 10px 30px;
+}
+
+/* ------------------------------- */
+/* detail */
+/* section */
+.product-content-left-small-img,
+.product-content-left-big-img{
+    padding: 10px;
+}
+.col-4 img{
+    border: 1px solid #ec7a1c;
+    width: 100%;
+    cursor: pointer;
+}
+.product-content-left-big-img img{
+    width: 100%;
+    border: 1px solid #ec7a1c;
+}
+.btn-outline-primary,
+.btn-outline-primary:hover{
+    width: 50px;
+    background-color: white;
+    color: #00833b;
+    border-radius: 0%;
+}
+.soluong .btn{
+    width: 80px;
+}
+
+/* ----------------- */
+/* san pham */
+.category{
+    padding: 0px;
+}
+.list-group{
+    margin-bottom: 30px;
+}
+
+.category-left,
+.category-right,.danhSachDiaChiShop{
+    height: 500px;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 5px;
+}
+.category-left ul li ol{
+    margin-bottom: 5px;
+}
+.category-right{
+    margin-bottom: 15px;
+}
+.list-products{
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+.list-products ul li{
+    width: 170px;
+    float: right;
+    list-style: none;
+    margin: 20px 0px 20px;
+    margin-right: 20px;
+}
+#list-products{
+    clear: both;
+}
+.filter{
+    display: none;
+    height: 60px;
+    line-height: 60px;
+    padding: 5px;
+    cursor: pointer;
+}
+.category ol{
+    cursor: pointer;
+}
+.page{
+    width: 250px;
+    margin: 5px auto;
+}
+  
+  /* Thiết lập vị trí cho thẻ div với class dropdown*/
+.loc,.sap-xep {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Nội dung Dropdown */
+.noidung_dropdown_loc,.noidung_dropdown_sapxep {
+/*Ẩn nội dụng các đường dẫn*/
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Thiết kế style cho các đường dẫn tronng Dropdown */
+.noidung_dropdown_loc a,.noidung_dropdown_sapxep a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.hienThi{
+    display:block;
+}
+.an,#loc-1{
+    display: none;
+}
+/* ------------------------------- */
+
+td{
+    vertical-align: middle;
+}
+.right-table-cart{
+    text-align: right;
+}
+table{
+    border: 1px solid;
+    border-radius: 10px !important;
+}
+.fa-trash-can,.fa-pen-to-square, select option,.fa-angle-down{
+    cursor: pointer;
+}
+/* ------------------------------- */
+/* thanh toan */
+.chuxanh{
+    color: #00833b;
+    font-weight: 700;
+}
+.chucam{
+    color: #ec7a1c;
+    font-weight: 700;
+}
+.thong-tin-khach-hang,.dia-chi-nhan-hang,.thoi-gian-nhan-hang-mong-muon,.loi-nhan,.phuong-thuc-thanh-toan{
+    padding: 20px;
+}
+.sao{
+    color: red;
+}
+.sanpham,.tomtatdonhang,.thong-tin-khach-hang,.dia-chi-nhan-hang,.dichvu,.phuong-thuc-thanh-toan{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.dia-chi-nhan-hang img{
+    width: 20px;
+    margin: -10px 5px 0px;
+}
+.dia-chi-nhan-hang ul,.thoi-gian-nhan-hang-mong-muon ul,.phuong-thuc-thanh-toan ul{
+    padding-left: 0;
+}
+.dia-chi-nhan-hang ul li,.thoi-gian-nhan-hang-mong-muon ul li{
+    display: inline;
+    margin-right: 10px;
+}
+/* #giaohangdennha .row{
+    margin-top: 10px;
+} */
+#nhanhangtaishop{
+    display: none;
+}
+.tieude,.tieude1{
+    border-bottom: 1px solid lightgray;
+    border-radius: 10px;
+    
+}
+.tieude ul,.tieude1 ul{
+    margin: 5px -10px 5px;
+}
+.tieude ul li,.tieude1 ul li{
+    display: inline;
+    margin: auto 10px auto;
+    padding-right: 10px;
+} 
+.noidung ul li,.noidung1 ul li{
+    display: inline;
+    padding-right: 10px;
+}
+.thanh-toan-left{
+    height: 100vh;
+    overflow-y: scroll;
+}
+.thanh-toan-left::-webkit-scrollbar, .category-right::-webkit-scrollbar{
+    display: none;
+}
+.thanh-toan-left::-webkit-scrollbar-thumb,.category-right::-webkit-scrollbar-thumb{
+    display: none;
+}
+.phuong-thuc-thanh-toan img{
+    width: 40px;
+}
+.phuong-thuc-thanh-toan ul li{
+    float: left;
+    list-style: none;
+    font-size: 12px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    text-align: center;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+.error{
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}
+/* ------------------------------- */
+/* timcuahang.html */
+.thanhpho{
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 15px 0px 15px;
+    font-size: 12px;
+}
+.danhSachDiaChiShop {
+    list-style: none;
+}
+.danhSachDiaChiShop .chucam{
+    cursor: pointer;
+}
+/* ------------------------------- */
+/* hotro.html */
+.phuluc ul li{
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: #00833b;
+    font-size: 14px;
+    font-family: Roboto,sans-serif;
+    font-weight: 500;
+}
+.hotro{
+    border: 1px solid #8a6d3b;
+    border-radius: 5px;
+    padding:10px;
+    background-color: rgb(248, 229, 205);
+}
+.hotro ul{
+    margin-top: 10px;
+}
+.hotro,.hotro ul li{
+    color: #8a6d3b;
+    font-size: 14px;;
+    margin-bottom: 0px;
+}
+.content{
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 20px;
+}
+/* ------------------------------- */
+/* tintuc.html */
+
+.content-news{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.tintuc:hover{
+    padding: 0px 10px;
+    transition: all .5s;
+}
+
+.tintuc img{
+    width: 100%;
+}
+.text-content{
+    padding: 20px;
+}
+.tieu-de{
+    font-size: 20px;
+    font-style: inherit;
+    font-weight: 700;
+}
+.tieu-de-ngan{
+    font-size: 14px;
+    color: rgb(87, 85, 85);
+}
+.tieu-de-ngan:hover{
+    color: black;
+}
+.tintuc{
+    padding: 10px;
+}
+.slick-arrow{
+    background-color: #ec7a1c !important;
+    border-radius: 50%;
+}
+/* ------------------------------- */
+/* detailnews.html */
+.detail-news{
+    margin:0px 50px 20px;
+    box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    text-align: justify;
+    color: #777;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.detail-news img{
+    width: 100%;
+}
+.detail-news h5{
+    margin-top: 10px;
+}
+.detail-news i{
+    font-size: 25px;
+    border: 3px solid #777;
+    border-radius: 50%;
+    margin: 5px;
+    padding: 10px;
+    width: 50px;
+    cursor: pointer;
+}
+.fa-facebook-f:hover{
+    background-color: #3B5998;
+    color: white;
+}
+.fa-twitter:hover{
+    background-color: #1DA1F2;
+    color: white;
+}
+.fa-envelope:hover{
+    background-color: #34A853;
+    color: white;
+}
+.fa-instagram:hover{
+    background-color: #BC2A8D;
+    color: white;
+}
+.comment{
+    margin:0px 50px 20px;
+    padding: 10px;
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: rgba(0,0,0,0.05);;
+}
+/* ------------------------------- */
+/* dangnhap.html */
+.dangnhap{
+    width: 400px; 
+    margin: 50px auto; 
+    box-sizing: border-box; 
+    border: 1px solid lightgray; 
+    border-radius: 15px; 
+    padding: 20px;
+}
+/* ------------------------------- */

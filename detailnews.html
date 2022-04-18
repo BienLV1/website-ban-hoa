@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết tin tức</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">   
+    <script src="sanpham.js"></script>
+    <script src="hotro.js"></script>
+    <script src="giohang.js"></script>
+    <script src="timkiem.js"></script>
+    <script src="chitietsanpham.js"></script>
+    <script src="formvalidation.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="toggle">
+            <div class="row">
+                <div class="col-3"><i class="fa-solid fa-bars fa-2x"></i></div>
+                <div class="col-9">
+                    <ul>    
+                        <li><a href="#"><i class="fa fa-solid fa-cart-shopping fa-2x"></i></i></a></li>                    
+                                                                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="top-bar container-fluid">
+            <div class="row">
+                <div id="ngonngu" class="col-12 col-sm-12 col-md-3 col-lg-3"><p><a href="#">Vietnamese</a> | <a href="#">English</a></p></div>
+                <div class="col-12 col-sm-12 col-md-9 col-lg-9" id="main-menu">
+                    <ul>                      
+                        <li><a href="dangnhap.html"><i class="fa fa-regular fa-circle-user"></i>Đăng nhập</a></li> 
+                        <li><a href="hotro.html"><i class="fa fa-regular fa-comment"></i></i>Hỗ trợ</a></li>
+                        <li><a href="timcuahang.html"><i class="fa fa-solid fa-shop"></i>Tìm cửa hàng</a></li>
+                        <li><a href="tintuc.html"><i class="fa fa-regular fa-newspaper"></i>Tin nổi bật</a></li>   
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="middle-header row">
+            <div class="col-12 col-md-12 col-lg-2 logo"><a href="trangchu.html"><img src="./image/logo.png" alt=""></a></div>
+            <div class="col-12 col-md-12 col-lg-5">
+                <div class="input-group mb-3">
+                    <input id="nameSanPham" type="text" class="form-control" placeholder="Tìm kiếm">
+                    <button onclick="ketQuaTimKiem(document.getElementById('nameSanPham').value)" class="btn btn-outline-secondary" type="button" id="button-addon2"><a href="ketquatimkiem.html"><i class="fa-solid fa-magnifying-glass"></i></a></button>
+                </div>                
+            </div>
+            <div class="col-12 col-md-12 col-lg-5">             
+                <div id="contact">
+                    <ul>
+                        <li style="padding-right: 20px;">
+                            <a href="giohang.html"><img src="./image/cart.png" alt="">
+                                <span id="cart-num">0</span>
+                            </a>                    
+                        </li>
+                        <li style="border-left: 1px solid #e9e9e9; border-right: 1px solid #e9e9e9;">
+                            <img src="./image/phone.png" alt="">
+                            <ul>
+                                <ol><b>1800 1143</b>  </ol>
+                                <ol>từ 08:00 - 20:00</ol>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="./image/map.png" alt="">
+                            <ul>
+                                <ol> Giao hàng </ol>
+                                <ol><b>Liên tỉnh</b></ol>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="line"></div>
+    </header>
+    <div class="detail-news">
+        <p style="font-size: 14px;">HOA TẶNG & HOA DỊCH VỤ</p>
+        <h3>Top 5 loài hoa tặng ngày Quốc tế Hạnh phúc 20/3</h3>
+        <hr>
+        <img src="./image/tin-1.png" alt="" width="100%">
+        <p>Ngày Quốc tế Hạnh phúc 20/3 hàng năm được xem là ngày của yêu thương và chia sẻ. Nhân ngày đặc biệt này, hãy gửi những lời chúc tốt đẹp cùng bó hoa tươi thắm đến những người bạn yêu thương. Và đừng quên tham khảo bài viết dưới đây để lựa chọn hoa tặng ngày Quốc tế Hạnh phúc 20/3 phù hợp nhé.</p>
+        <h3>Nguồn gốc ngày Quốc tế Hạnh phúc 20/3</h3>
+        <p>Ngày Quốc tế Hạnh phúc được lấy ý tưởng từ Vương Quốc Bhutan. Từ những năm 1970, nhà Vua của vương quốc này đã đưa ra một cách thức mới nhằm đánh giá sự thịnh vượng của xã hội, đó là thông qua chỉ số hạnh phúc quốc gia (đánh giá dựa trên yếu tố như sức khỏe, tinh thần, giáo dục, môi trường, chất lượng quản lý và mức sống và chất lượng sống của người dân), bên cạnh các chỉ số về kinh tế thường được dùng để đánh giá về sự giàu có vật chất. <br>
+            Vào năm 2012, Liên Hiệp Quốc đã chính thức chọn ngày 20/3 hàng năm là Ngày Quốc tế Hạnh phúc vì đây là một ngày đặc biệt trong năm. Do mặt trời nằm ngang đường xích đạo nên đây là ngày duy nhất có độ dài ngày và đêm bằng nhau – biểu tượng cho sự cân bằng, hài hòa của vũ trụ.
+        </p>
+        <h3>Hoa tặng ngày Quốc tế Hạnh phúc 20/3 – nên chọn hoa gì?</h3>
+        <p>
+            Không như những ngày lễ khác trong năm, Ngày Quốc tế Hạnh phúc 20/3 là ngày bạn có thể thoải mái gửi trao yêu thương mà không bị bó buộc trong một đối tượng cụ thể. Ngoài việc dành thời gian bên cạnh gia đình và những người thân yêu, bạn đừng quên gửi đến họ một bó hoa hay chậu hoa tươi thắm thay lời chúc tốt lành. Chắc chắn người nhận sẽ cảm thấy vô cùng vui vẻ và hạnh phúc. <br>
+            Dưới đây, Dalat Hasfarm sẽ gợi ý cho bạn những loài hoa tặng ngày Quốc tế Hạnh phúc 20/3 phù hợp để bạn chọn lựa nhé.
+        </p>
+        <img src="./image/hoa-hong.jpg" alt="">
+        <h5>Hoa hồng</h5>
+        <p>Hoa hồng – nữ hoàng của các loài hoa sở hữu vẻ đẹp duyên dáng, quyến rũ tất nhiên không thể thiếu trong danh sách những loài hoa tặng ngày Quốc tế Hạnh phúc 20/3. Tùy thuộc vào đối tượng mà bạn tặng hoa, bạn có thể lựa chọn màu sắc phù hợp.</p>
+        <ul>
+            <li>Màu hồng phớt: Tượng trưng cho tình yêu đầy mơ mộng, lãng mạn và dịu dàng.</li>
+            <li>Màu hồng phấn: Thông điệp về sự trìu mến, nhẹ nhàng.</li>
+            <li>Màu cam: Thể hiện sự nhiệt tình và đam mê cháy bỏng.</li>
+        </ul>
+        <img src="./image/hoa-cam-tu-cau.jpg" alt="">
+        <h5>Hoa cẩm tú cầu</h5>
+        <p>Hoa cẩm tú cầu mang một vẻ đẹp yêu kiều, với những cánh hoa nhỏ mong manh, chen chúc chúc kề vai nhau tạo thành từng chùm hoa đầy đặn. Cẩm tú cầu đại diện cho tình cảm chân thành, lòng biết ơn, sự thấu hiểu giữa hai người nên cũng là một lựa chọn vô cùng hợp lý để dành tặng nhau trong ngày Quốc tế Hạnh phúc thay cho những lời nhắn nhủ chân thành và lời chúc tốt đẹp. Bạn nhớ lưu ý về ý nghĩa của sắc hoa để chọn lựa nữa nhé.</p>
+        <ul>
+            <li>Màu hồng: Tượng trưng cho lãng mạn trong tình yêu và cảm xúc chân thành.</li>
+            <li>Màu trắng: Biểu tượng của sự tinh khiết, duyên dáng, kiêu sa.</li>
+            <li>Màu tím: Tượng trưng cho sự sung túc, may mắn.</li>
+        </ul>
+        <img src="./image/Lan-Ho-Diep-Hong-Phat-050s.jpg" alt="">
+        <h5>Lan Hồ Điệp</h5>
+        <p>Một chậu Lan Hồ Điệp với vẻ đẹp quý phái và tượng trưng cho lòng hiếu thảo, hạnh phúc viên mãn cùng sức sống mãnh liệt sẽ là món quà tặng đầy ý nghĩa nhân ngày Quốc tế Hạnh phúc 20/3 mà bạn có thể gửi đến đấng sinh thành của mình. Những cành Lan Hồ Điệp sẽ thay bạn trao lời chúc mong cha mẹ luôn khỏe mạnh, vui vẻ.</p>
+        <ul>
+            <li>Lan Hồ Điệp tím: Thể hiện cho sự chân thành, chung thủy và vẻ đẹp nữ tính.</li>
+            <li>Lan Hồ Điệp đỏ: Biểu hiện của tình yêu cháy bỏng, nồng nàn hoặc quyền lực, lòng quyết tâm chinh phục những điều mới mẻ.</li>
+            <li>Lan Hồ Điệp Vàng: Tượng trưng cho sự khởi đầu tốt đẹp, thành công mỹ mãn, mang đến niềm vui và những cơ hội mới,…</li>
+            <li>Lan Hồ Điệp Trắng: Biểu tượng của sự ngây thơ, tinh tế và sang trọng.</li>
+        </ul>
+        <img src="./image/hoa-cuc-hoa-mi.jpg" alt="">
+        <h5>Hoa cúc họa mi</h5>
+        <p>Hoa cúc họa mi sở hữu vẻ đẹp trong trẻo, đáng yêu và tượng trưng cho những tình cảm chân thành, tươi sáng cũng như sự thịnh vượng nên bạn hoàn toàn có thể lựa chọn để gửi tặng bạn bè nhân ngày Quốc tế Hạnh phúc 20/3. Loài hoa này có thể bó chung với các loài hoa khác như hoa baby hay hoa hồng nhưng đẹp nhất bạn vẫn nên chọn một bó cúc họa mi đơn thuần để làm nổi bật vẻ đẹp giản dị, mộc mạc của loài hoa này.</p>
+        <img src="./image/Bo-Hoa-Mon-Qua-Hanh-Phuc-211s.jpg" alt="">
+        <h5>Hoa cẩm chướng</h5>
+        <p>Hoa cẩm chướng mang nét đẹp quyến rũ, dịu dàng và tượng trưng cho tình bạn bè thân thiết, cao quý, sự tôn kính và ái mộ. Bạn có thể chọn loài hoa này để tặng nhân ngày Quốc tế Hạnh phúc 20/3, nhưng nhớ lưu ý về ý nghĩa của các sắc hoa nhé.</p>
+        <ul>
+            <li>Màu trắng: Tượng trưng cho tình yêu thuần khiết</li>
+            <li>Màu đỏ đậm: Biểu tượng của tình yêu sâu sắc</li>
+            <li>Màu đỏ sáng: Thể hiện sự ngưỡng mộ</li>
+            <li>Màu hồng: Biểu tượng cho tình yêu của người mẹ</li>
+        </ul>
+        <p>Hiện các cửa hàng Dalat Hasfarm, quầy hoa Dalat Hasfarm trong siêu thị và Dalat Hasfarm Online Shop có rất nhiều mẫu hoa bó xinh xắn, bạn có thể đến chọn mua hoặc đặt giao hàng đều được.</p>
+        <div style="justify-content: center; align-content: center;display: flex;">
+            <i class="fa-brands fa-facebook-f" style="padding-left: 13px;"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <hr>
+        <p style="font-size: 12px; margin: 0px;">This entry was posted in Hoa tặng & Hoa dịch vụ. Bookmark the permalink.</p>
+    </div>
+    <div class="comment">
+        <div class="row">
+            <p class="chuxanh">Leave a Reply</p>
+            <p>Your email address will not be published. Required fields are marked <span class="sao">*</span></p>
+            <p><b>Comment</b></p>
+            <div class="form-floating">
+                <textarea class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="mb-3 col-lg-4">
+                <label for="names" class="form-label"><b>Name <span class="sao">*</span></b></label>
+                <input khongDeTrong noiDungLoiDeTrong='Họ và tên không được để trống'type="text" class="form-control" id="names">
+                <label for="names" class="error" id="names-error"></label>
+            </div>
+            <div class="mb-3 col-lg-4">
+                <label for="emails" class="form-label"><b>Email <span class="sao">*</span></b></label>
+                <input khongDeTrong noiDungLoiDeTrong='Email không được để trống' type="text" class="form-control" id="emails" >
+                <label for="emails" class="error" id="emails-error"></label>
+            </div>
+            <div class="mb-3 col-lg-4">
+                <label for="web" class="form-label"><b>Website</b></label>
+                <input  type="text" class="form-control" id="web" >
+                <label for="web" class="error" id="web-error"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="andanh">
+                    <label class="form-check-label" for="andanh"><b>Save my name, email, and website in this browser for the next time I comment.</b></label>
+                </div>
+            </div>
+            <button class="btn" style="border-radius: 0; width: 180px;" onclick="onclickThanhToan()">POST COMMENT</button>
+        </div>
+    </div>
+    <footer>
+        <div class="line"></div>
+        <div class="row">
+            <a href="#">
+                <img class="logo-footer" src="./image/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="row" >
+            <div class="col-12  col-sm-12 col-md-5 col-lg-5"style="margin-bottom: 20px;">
+                <h4><b><p>Công ty TNHH Dalat Hasfarm</p></b></h4>
+                Dalat Hasfarm - Được biết đến là công ty tiên phong mở đầu cho việc
+                    trồng hoa chuyên nghiệp tại Việt Nam được thành lập từ năm 1994.
+                    Năm 2013 Dalat Hasfarm được tạp chí Flowers Tech có trụ sở tại Mỹ bình
+                    chọn là công ty hoa tươi lớn nhất Đông Nam Á.</br>
+                - Địa chỉ trụ sở: 450 Nguyên Tử Lực, P.8, Đà Lạt, Lâm Đồng, Việt Nam</br>
+                - Giấy chứng nhận Đăng ký Doanh nghiệp số <b>5800000167</b> do Sở Kế hoạch và Đầu tư
+                Tỉnh Lâm Đồng cấp ngày 07/06/1994</br>
+            </div>
+            <div class="col-5  col-sm-5 col-md-3 col-lg-3">
+                <h4><b><p>THÔNG TIN</p></b></h4>
+                <ul>
+                    <li><a href="#">Giới thiệu Dalat Hasfarm</a></li>
+                    <li><a href="#">Shop Dalat Hasfarm</a></li>
+                    <li><a href="#"> Chính sách bảo mật</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                </ul>
+            </div>
+            <div class="col-7 col-sm-7 col-md-4 col-lg-4">
+                <h4><b><p>LIÊN HỆ</p></b></h4>
+                <ul>
+                    <li><img src="./image/mail.png" alt="" width="30px"> Email Đặt Hàng: dalathasfarm@gmail.com</li>
+                    <li><img src="./image/mail.png" alt=""width="30px"> Email CSKH: hotro@dalathasfarm.com</li>
+                    <li><img src="./image/phone.png" alt=""width="30px"> Hotline: 1800 1143</li>
+                    <li><img src="./image/dmca-badge-w150-5x1-01.png" alt=""></li>
+                </ul>
+                
+                <img src="./image/logo-da-thong-bao-website-voi-bo-cong-thuong.png" alt="logo-da-thong-bao-website-voi-bo-cong-thuong" width="60%">
+            </div>
+        </div>   
+        <div class="line"></div>
+        <div class="row pay-method">
+            <h5 style="text-align: left;"><b>PAYMENT METHOD</b></h5>
+            <img src="./image/pay1.png" alt="">
+            <img src="./image/pay2.png" alt="">
+            <img src="./image/pay3.png" alt="">
+            <img src="./image/pay4.png" alt="">
+            <img src="./image/pay5.png" alt="">
+            <img src="./image/pay6.png" alt="">
+            <img src="./image/pay7.png" alt="">
+            <img src="./image/pay8.png" alt="">
+        </div>
+        <div class="text-footer">
+            <p>© 2020 Dalathasfarm. All rights reserved.</p>
+        </div>
+        
+    </footer>
+    <div id="backtop">
+        <i class="fa-solid fa-angles-up"></i>
+    </div>
+    <script>
+        var cartNum=chuyenSoLoaiSanPhamSangHTMl();
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./js.js"></script>
+</body>
+</html>

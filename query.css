@@ -1,0 +1,48 @@
+@media(min-width: 600px ) and (max-width: 768px){
+    
+}
+@media(max-width: 600px ) {
+    .top-bar{
+        line-height: 20px;
+    }
+    .dia-chi-nhan-hang ul li,.phuong-thuc-thanh-toan ul li{
+        display: list-item;
+        list-style: none;
+    }
+    .dangnhap{
+        width: 300px;
+    }
+}
+@media(max-width: 768px) {
+    
+    .toggle,
+    .filter{
+        display: block;
+    }
+    #ngonngu, .top-bar, #contact, .logo, .fa-circle-user{
+        display: none;
+    }
+    .top-bar ul li{
+        float: left;
+        padding: auto;
+    }
+    .main-menu ul li{
+        clear: both;
+        flex-direction: column;        
+    }
+    .category-left
+    {
+        height: auto;
+        display: none;
+        overflow-y: hidden;
+    }
+    
+}
+@media(min-width: 768px) {
+}
+@media(min-width: 1023px) and (max-width:1180px){
+}
+@media(min-width: 1180px) {
+   
+}
+
