@@ -222,7 +222,6 @@ select{
 /* footer */
 footer{
     border-top:3px;
-    padding: 20px;
 }
 footer ul li{
     list-style: none;

@@ -12,6 +12,15 @@
     .dangnhap{
         width: 300px;
     }
+    html{
+        font-size: 12px;
+    }
+    .logo-footer{
+        transform: translate(20%,0%);
+    }
+    .pay-method img{
+        width: 120px;
+    }
 }
 @media(max-width: 768px) {
     
