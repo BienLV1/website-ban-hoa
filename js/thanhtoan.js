@@ -21,10 +21,10 @@ function chuyenDoiTuongBangSanPhamSangHTML(itemGioHang){
     var tongTien=itemGioHang.soLuong*sanPham.gia;
     var html='<ul>\n'+
     '                            <li>\n'+
-    '                                <img src="'+sanPham.hinhAnh+'" alt="" width="100px">\n'+
+    '                                <img src="'+sanPham.hinhAnh+'" alt="" width="80px"><br>\n'+
     '                                <a href="detail.html" onclick="onclickChiTietSanPham(\''+sanPham.id+'\')">'+sanPham.ten+'</a> x '+itemGioHang.soLuong+'\n'+
     '                            </li>\n'+
-    '                            <li style="float: right;margin: 35px auto;"><b>'+tongTien+'đ</b></li>\n'+
+    '                            <li style="float: right;margin: -35px auto;"><b>'+tongTien+'đ</b></li>\n'+
     '                        </ul>';
     return html;
 }

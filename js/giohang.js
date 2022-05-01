@@ -92,7 +92,7 @@ function chuyenDoiTuongItemGioHangSangHTML(itemGioHang){
     '                            </div>\n'+
     '                        </div>\n'+
     '                      </td>\n'+
-    '                      <td>'+tongTien+'</td>\n'+
+    '                      <td class="sum">'+tongTien+'</td>\n'+
     '                      <td><i class="fa-regular fa-trash-can" onclick="xoaItemGioHang(\''+itemGioHang.idSanPham+'\')"></i></br><i class="fa-regular fa-pen-to-square" onclick="capNhatItemGioHang(\''+itemGioHang.idSanPham+'\','+itemGioHang.soLuong+')"></i></td>\n'+
     '                    </tr>';
     return html;
@@ -179,8 +179,13 @@ function chuyenSoLoaiSanPhamSangHTMl(){
     var danhSachItemGioHang=layDanhSachItemGioHang();
     var cartNum=danhSachItemGioHang.length;
     var html=''+cartNum+'';
-    var nodeCartNum=document.getElementById('cart-num');
-    return nodeCartNum.innerHTML=html;
+    var nodeCartNum=document.getElementsByClassName('cart-num');
+    for(var i=0;i<nodeCartNum.length;i++){
+         nodeCartNum[i].innerHTML=html;
+         console.log(html);
+         console.log(nodeCartNum);
+    }
+    
 }
 function nutThanhToan(){
     var danhSachItemGioHang=layDanhSachItemGioHang();

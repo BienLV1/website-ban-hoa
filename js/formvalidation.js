@@ -24,7 +24,6 @@ function kiemTraFormValidationCacInputDeTrong(){
             hopLe=true;
         }
     }
-    console.log(hopLe);
     return hopLe;
 }
 function truyXuatNodeHienThiLoiTheoInputId(inputId){
@@ -35,6 +34,9 @@ function layNoiDungHienThiLoiTheoNodeInput(nodeInput){
     var noDungLoi='Không được để trống';
     if(nodeInput.hasAttribute('noiDungLoiDeTrong')){
         noiDungLoi=nodeInput.getAttribute('noiDungLoiDeTrong')
-    }
+    } 
     return noiDungLoi;
 }
+
+
+

@@ -90,7 +90,7 @@ h4{
 }
 .line{
     height: 3px;
-    background-image:url("./image/line.png");
+    background-image:url("../image/line.png");
     background-repeat: no-repeat;
     background-size: 100%;
     margin-bottom: 20px;
@@ -103,6 +103,9 @@ textarea{
 }
 select{
     margin-bottom: 5px;
+}
+section{
+    padding:0px 20px 20px;
 }
 /* -------------------- */
 /* header */
@@ -170,7 +173,7 @@ select{
     width: 30px;
     float: left;
 }
-#cart-num{
+.cart-num{
     position: absolute;
     width: 25px;
     height: 25px;
@@ -184,6 +187,9 @@ select{
 
 .btn-outline-success{
     padding: 5px 5px;
+}
+.carousel{
+    margin-bottom: 20px;
 }
 /* section */
 .about-picture{
@@ -249,7 +255,7 @@ footer ul li a{
     align-items: center;
     border-radius: 50%;
     position: fixed;
-    bottom: 40px;
+    bottom: 70px;
     right: 20px;
     cursor: pointer;
 }
@@ -529,7 +535,9 @@ table{
 }
 /* ------------------------------- */
 /* tintuc.html */
-
+.body-news{
+    padding: 50px;
+}
 .content-news{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
     text-align: center;

@@ -5,44 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <script src="sanpham.js"></script>
-    <script src="hotro.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">  
+    <script src="./js/sanpham.js"></script>
+    <script src="./js/hotro.js"></script>
+    <script src="./js/admin.js"></script>
+    <script src="./js/formvalidation.js"></script>
 </head>
 <body>
-    <div>
-        <label for="">Image</label>
-        <input type="text" id="img">
-    </div>
-    <div>
-        <label for="">Name</label>
-        <input type="text" id="name">
-    </div>
-    <div>
-        <label for="">Price</label>
-        <input type="number" id="price">
-    </div>
-    <div>
-        <button onclick="add()">submit</button>
-    </div>
-    <script>
-        var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-        if (danhSachSanPham == null)
-            danhSachSanPham = new Array();
-        console.log(danhSachSanPham);
+    <header>
+        <div class="toggle">
+            <div class="row">
+                <div class="col-3"><i class="fa-solid fa-bars fa-2x"></i></div>
+                <div class="col-9">
+                    <ul>    
+                        <li><a href="giohang.html"><i class="fa fa-solid fa-cart-shopping fa-2x"></i> <span class="cart-num" style="margin-left: 15px;">0</span></a></li>                                                                  
+                    </ul>
+                </div>
+            </div>
+        </div>
         
-        function add(){
-            var img=document.getElementById('img').value;
-            var name=document.getElementById('name').value;
-            var price=document.getElementById('price').value;
+        <nav class="top-bar container-fluid">
+            <div class="row">
+                <div id="ngonngu" class="col-12 col-sm-12 col-md-3 col-lg-3"><p><a href="admin.html">Admin</a></p></div>
+                <div class="col-12 col-sm-12 col-md-9 col-lg-9" id="main-menu">
+                    <ul>                      
+                        <li><a href="dangnhap.html"><i class="fa fa-regular fa-circle-user"></i>Đăng xuất</a></li> 
+                        <!-- <li><a href="hotro.html"><i class="fa fa-regular fa-comment"></i></i>Tài khoản</a></li>
+                        <li><a href="timcuahang.html"><i class="fa fa-solid fa-shop"></i>Sản phẩm</a></li>
+                        <li><a href="tintuc.html"><i class="fa fa-regular fa-newspaper"></i>Đơn hàng</a></li>    -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        
+    </header>
+    <section class="row">
+        <div class="dangnhap">
+            <p style="text-align: center; font-weight: 700; font-size: 20px;">Sản phẩm</p>
+            <div class="mb-3">
+                <label for="img" class="form-label"><b>Hình ảnh <span class="sao">*</span></b></label>
+                <input khongDeTrong  noiDungLoiDeTrong='Hình ảnh không được để trống'type="text" class="form-control" id="img">
+                <label for="img" class="error" id="img-error"></label>
+            </div>
+            <div class="mb-3"><b>Tên sản phẩm<span class="sao">*</span></b></label>
+                <input khongDeTrong  noiDungLoiDeTrong='Tên sản phẩm không được để trống' type="text" class="form-control" id="name" >
+                <label for="name" class="error" id="name-error"></label>
+            </div>
+            <div class="mb-3"><b>Giá sản phẩm<span class="sao">*</span></b></label>
+                <input khongDeTrong  noiDungLoiDeTrong='Giá sản phẩm không được để trống' type="number" min="1" class="form-control" id="price" >
+                <label for="price" class="error" id="price-error"></label>
+            </div>
+            <button class="btn" onclick="add()" style="width:100%; border-radius: 0px; margin: 0;">Thêm</button>
+            
+        </div>
 
-            var sanPham=SanPham(img,name,price)
-            danhSachSanPham.push(sanPham);
-            console.log(danhSachSanPham);
-            var jsonDanhSachSanPham=JSON.stringify(danhSachSanPham)
-            localStorage.setItem('danhSachSanPham',jsonDanhSachSanPham);
-        }
-        
-    </script>
+        <div class="dangnhap">
+            <p style="text-align: center; font-weight: 700; font-size: 20px;">Tài khoản</p>
+            <div class="mb-3">
+                <label for="user" class="form-label"><b>User <span class="sao">*</span></b></label>
+                <input khongDeTrong  noiDungLoiDeTrong='Tên đăng nhập không được để trống'type="text" class="form-control" id="user">
+                <label for="user" class="error" id="user-error"></label>
+            </div>
+            <div class="mb-3"><b>Password<span class="sao">*</span></b></label>
+                <input khongDeTrong  noiDungLoiDeTrong='Mật khẩu không được để trống' type="password" class="form-control" id="password" >
+                <label for="password" class="error" id="password-error"></label>
+            </div>
+            <div class="mb-3"><b>Status<span class="sao">*</span></b></label>
+                <input khongDeTrong  noiDungLoiDeTrong='Quyền không được để trống' type="number" min="0" max="1" class="form-control" id="status" >
+                <label for="status" class="error" id="status-error"></label>
+            </div>
+            <button class="btn" onclick="creatAccount()" style="width:100%; border-radius: 0px; margin: 0;">Thêm</button>
+            
+        </div>
     
+        
+    </section>
+
+    <footer>
+        <div class="text-footer">
+            <p>© 2020 Dalathasfarm. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./js/js.js"></script>
 </body>
 </html>

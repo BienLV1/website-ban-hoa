@@ -9,18 +9,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="query.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/query.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">   
-    <script src="sanpham.js"></script>
-    <script src="hotro.js"></script>
-    <script src="giohang.js"></script>
-    <script src="timkiem.js"></script>
-    <script src="chitietsanpham.js"></script>
-    <script src="thanhtoan.js"></script>
-    <script src="formvalidation.js"></script>
+    <script src="./js/sanpham.js"></script>
+    <script src="./js/hotro.js"></script>
+    <script src="./js/giohang.js"></script>
+    <script src="./js/timkiem.js"></script>
+    <script src="./js/chitietsanpham.js"></script>
+    <script src="./js/thanhtoan.js"></script>
+    <script src="./js/formvalidation.js"></script>
 </head>
 
 <body>
@@ -30,8 +30,7 @@
                 <div class="col-3"><i class="fa-solid fa-bars fa-2x"></i></div>
                 <div class="col-9">
                     <ul>    
-                        <li><a href="#"><i class="fa fa-solid fa-cart-shopping fa-2x"></i></i></a></li>                    
-                                                                    
+                        <li><a href="giohang.html"><i class="fa fa-solid fa-cart-shopping fa-2x"></i> <span class="cart-num" style="margin-left: 15px;">1</span></a></li>                                                                  
                     </ul>
                 </div>
             </div>
@@ -63,7 +62,7 @@
                     <ul>
                         <li style="padding-right: 20px;">
                             <a href="giohang.html"><img src="./image/cart.png" alt="">
-                                <span id="cart-num">0</span>
+                                <span class="cart-num">1</span>
                             </a>                    
                         </li>
                         <li style="border-left: 1px solid #e9e9e9; border-right: 1px solid #e9e9e9;">
@@ -256,19 +255,19 @@
             <div class="col-lg-4">
                 <div class="sanpham">
                     <div class="tieude" id="tieude">
-                        <!-- <ul>
+                        <ul>
                             <li class="chuxanh">Sản Phẩm</li>
                             <li style="float: right;"class="chucam">1 Sp <i class="fa-solid fa-angle-down"></i></li>
-                        </ul> -->
+                        </ul>
                     </div>
                     <div class="noidung" id="noidung">
-                        <!-- <ul>
+                        <ul>
                             <li>
-                                <img src="./image/hoa-cam-on.jpg" alt="" width="100px">
+                                <img src="./image/hoa-cam-on.jpg" alt="" width="80px"><br>
                                 <a href="detail.html">Hoa cảm ơn</a> x1
                             </li>
-                            <li style="float: right;margin: 35px auto;"><b>1500000 đ</b></li>
-                        </ul> -->
+                            <li style="float: right;margin: -35px auto;"><b>1750000 đ</b></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="tomtatdonhang">
@@ -278,9 +277,9 @@
                         </ul>
                     </div>
                     <div class="noidung1" id="noidung1">
-                        <!-- <ul style="margin-top: 10px;">
+                        <ul style="margin-top: 10px;">
                             <li>Tạm tính</li>
-                            <li style="float: right;"><b>1500000 đ</b></li>
+                            <li style="float: right;"><b>1750000 đ</b></li>
                         </ul>
                         <ul>
                             <li>Ship</li>
@@ -289,8 +288,8 @@
                         <hr style="width: 90%; margin: 10px auto 10px;">
                         <ul>
                             <li><b>Tổng cộng</b></li>
-                            <li style="float: right; font-size: 20px;" class="chucam">1500000 đ</li>
-                        </ul> -->
+                            <li style="float: right; font-size: 20px;" class="chucam">1900000 đ</li>
+                        </ul>
                     </div>
                 </div>
                 <button class="btn" style="width: 100%;" onclick="onclickThanhToan()">Thanh toán</button>
@@ -300,7 +299,7 @@
     <footer>
         <div class="line"></div>
         <div class="row">
-            <a href="#">
+            <a href="index.html">
                 <img class="logo-footer" src="./image/logo.png" alt="logo">
             </a>
         </div>
@@ -365,6 +364,6 @@
     </script>
     
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="./js.js"></script>
+    <script src="./js/js.js"></script>
 </body>
 </html>
